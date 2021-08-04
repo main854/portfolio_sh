@@ -1,0 +1,35 @@
+*{margin: 0;}
+
+html{font-size: 10px;}
+body{font-size: 1rem;}
+a{text-decoration: none;color: #ffffff;}
+
+header{width: 100%;background-color: #303030;height: 8rem;}
+header > nav{width: 100%;margin: auto;display: flex;position: fixed;background-color: #303030;}
+header > nav > .logo{width: 40.0rem;margin: auto;padding-top: 1.7rem;}
+header > nav > .menu{margin: auto;display: inline-block;padding-top: 0.5rem;}
+
+input[id="menuicon"] {display: none;}
+input[id="menuicon"] + label {display: block;margin: 15px;width: 50px;height: 40px;position: relative;cursor: pointer;}
+input[id="menuicon"] + label span {display: block;position: absolute;width: 100%;height: 5px;border-radius: 30px;background: #ffffff;transition: all .35s;}
+input[id="menuicon"] + label span:nth-child(1) {top: 0;}
+input[id="menuicon"] + label span:nth-child(2) {top: 50%;transform: translateY(-50%);}
+input[id="menuicon"] + label span:nth-child(3) {bottom: 0;}
+input[id="menuicon"]:checked + label {z-index: 2;}
+input[id="menuicon"]:checked + label span {background: #fff;}
+input[id="menuicon"]:checked + label span:nth-child(1) {top: 50%;transform: translateY(-50%) rotate(45deg);}
+input[id="menuicon"]:checked + label span:nth-child(2) {opacity: 0;}
+input[id="menuicon"]:checked + label span:nth-child(3) {bottom: 50%;transform: translateY(50%) rotate(-45deg);}
+div[class="sidebar"] {width: 100%;height: 0;background: #272727;position: fixed;top: 7.5rem;left: 0;z-index: 1;transition: all .35s;overflow: hidden;}
+input[id=menuicon]:checked + label + div {height: 300px;}
+
+div > .menu_item {position: relative;}
+div > .menu_item > ul{width: 100%;display: inline-block;padding: 0rem 0rem;}
+div > .menu_item > ul > li {list-style: none;text-align: center;padding: 2rem;border-bottom: 1px solid #303030;}
+div > .menu_item > ul > li > a {font-size: 26px;color: #ffffff;}
+
+section > .keyvisual {background-image: url('../img/02_keyvisual_bg.png');height: 80rem;}
+section > .keyvisual > .keyvisual_wrap {margin: auto;width: 100%;height: 80rem;}
+
+section > .profile {background-image: url('../img/04_profile.png');background-color: #272727;height: 105.0rem;width: 100%;}
+section > .profile > .profile_wrap {margin: auto;width: 100%;text-align: center;}
